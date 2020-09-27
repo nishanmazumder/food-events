@@ -1,0 +1,116 @@
+.nm-navigation{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.nm-logo{
+    width: $logoSize;
+}
+.nm-nav{
+    padding: 15px 16px;
+}
+.navbar-toggler-icon{
+    color: #fff;
+}
+.nm-nav-item{
+    @include nmNav();
+}
+
+.nm-header-icon{
+    display: block;
+    list-style-type: none;
+    margin-top: 10px;
+
+    li{
+        display: inline;
+    }
+
+    li a{}
+
+    i{
+        font-size: 30px;
+        transition: .5s;
+        color: #fff;
+    }
+}
+
+/***Sidebar menu***/
+$display : "none";
+
+.nmSidenav{
+    background: $nmC1;
+    height: 100%;
+    width: 350px;
+    padding: 30px 20px;
+    position: fixed;
+    right: -350px;
+    z-index: 2;
+    transition: all .4s ease-in;
+
+    ul{
+        list-style-type: none;
+    }
+    a{
+        color: $nmC2;
+    }
+}
+.nmSidenav-open{
+    right: 0px $imp;
+}
+
+.nmSidenav-icon{
+    display: $display;
+}
+
+.nmSidenav-icon-close{
+    display: block $imp;
+    right: -350px $imp;
+}
+
+.nm-sidenav-icon{
+    display: block;
+    position: absolute;
+    right: 25px;
+    top: 20px;
+    z-index: 1;
+
+    div{
+        width: 40px;
+        height: 2px;
+        background: #C6A97F;
+        margin: 5px;
+        position: relative;
+        display: block;
+        transition: all .2s ease-in;
+
+        &:nth-child(2){
+            left: -10px
+        }
+        &:nth-child(3){
+            left: 10px
+        }
+    }
+}
+
+.nm-sidenav-div-2{
+    left: 0px $imp;
+}
+.nm-sidenav-div-3{
+    left: 0px $imp;
+}
+
+.sidenav-hover{
+    background: $nmC3 $imp;
+}
+.sidenav-open{
+    display: none;
+}
+.nm-sidenav-close{
+    font-size: 28px;
+    cursor: pointer;
+    color: $nmC2;
+    position: absolute;
+    display: none;
+    right: 0;
+    margin-left: 50px;
+}
